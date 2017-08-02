@@ -4,7 +4,7 @@
 https://www.hackerrank.com/challenges/YOUR-TOPIC
 """
 
-import fileinput
-lines = fileinput.input()
+import sys
+N = sys.stdin.readline()
 
 #your code here
