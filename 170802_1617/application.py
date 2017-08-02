@@ -18,6 +18,6 @@ for i in xrange(1,N+1):
   elif query==2:
     stack.pop()
   elif query==3:
-    print(max(stack))
+    print(max(stack)) #TODO need a faster way to store the max value
 
   #print(stack)
