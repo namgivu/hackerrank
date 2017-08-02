@@ -1,11 +1,12 @@
 #!/usr/bin/env python2.7
 
 """
-https://www.hackerrank.com/challenges/YOUR-TOPIC
+https://www.hackerrank.com/challenges/balanced-brackets
 """
 
 import sys
 N = int(sys.stdin.readline())
+
 
 def matched(_c, c):
   return False \
@@ -18,7 +19,8 @@ def matched(_c, c):
 def check(s):
   ok=True
   stack = []
-  _c = None
+
+  #region pop out all matched ones
   for i in xrange(len(s)):
     c = s[i]
 
@@ -32,6 +34,11 @@ def check(s):
 
     else:
       stack.append(c)
+  #endregion pop out all matched ones
+
+  #check if any opening one left
+  if len(stack)>0:
+    ok=False
 
   return 'YES' if ok else 'NO'
 
