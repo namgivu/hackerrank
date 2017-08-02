@@ -18,14 +18,17 @@ def matched(_c, c):
 def check(s):
   ok=True
   stack = []
+  _c = None
   for i in xrange(len(s)):
     c = s[i]
 
     if c in [']',')','}']:
-      _c = stack.pop()
+      #region handle closing
+      _c = stack.pop() if len(stack)>0 else None
       if not matched(_c, c):
         ok=False
         break
+      #endregion handle closing
 
     else:
       stack.append(c)
