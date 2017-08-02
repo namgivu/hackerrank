@@ -1,3 +1,5 @@
+##region github ignore
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -99,3 +101,10 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+##endregion github ignore
+
+
+##region my ignore
+**/output*
+##endregion my ignore
