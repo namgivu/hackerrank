@@ -1,7 +1,7 @@
 #!/usr/bin/env python2.7
 
 """
-https://www.hackerrank.com/challenges/maximum-element
+https://www.hackerrank.com/challenges/YOUR-CHALLENGE
 """
 import sys
 
