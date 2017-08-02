@@ -3,12 +3,13 @@
 """
 https://www.hackerrank.com/challenges/maximum-element
 """
-import sys
+import fileinput
+lines = fileinput.input()
 
 stack = []
-N = int(sys.stdin.readline())
+N = int(lines[0])
 for i in xrange(1,N+1):
-  line = sys.stdin.readline().strip().split(' ')
+  line = lines[i].strip().split(' ')
   query = int(line[0])
   param = int(line[1]) if query==1 else None
 
