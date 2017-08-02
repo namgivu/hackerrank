@@ -106,5 +106,5 @@ ENV/
 
 
 ##region my ignore
-**/output*
+**/output.txt
 ##endregion my ignore
