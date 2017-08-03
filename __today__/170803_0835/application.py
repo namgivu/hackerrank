@@ -7,7 +7,7 @@ https://www.hackerrank.com/challenges/game-of-two-stacks
 #TODO Fix incorrect solution
 
 #turn this on when debug to redirect stdin to file in PyCharm ref. https://stackoverflow.com/a/39482389/248616
-# from util import * ; setupPycharmDebug('input.txt', 'output.txt')
+from util import * ; setupPycharmDebug()
 
 
 def getSum(arr, x):
@@ -40,7 +40,9 @@ def doCount(aLimit, bLimit, aSum, bSum, countMax):
 
   return countMax
 
+
 import sys
+
 g = int(sys.stdin.readline())
 
 for _ in xrange(g):
@@ -59,4 +61,4 @@ for _ in xrange(g):
   countMax = doCount(bLimit, aLimit, bSum, aSum, countMax)
 
   print(countMax)
-  sys.stdout.flush() #write/flush immediately ref. https://stackoverflow.com/a/230774/248616
+  flushOutput()
