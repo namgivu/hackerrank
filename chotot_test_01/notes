@@ -1,0 +1,26 @@
+16 questions
+1-3 programing in language of our choice
+- q1 max diff of pairs and the pair must satisfy: the bigger value has bigger index order #so sad I didn't pass all the test, whyyyyyy?
+- q2 on a matrix MxN of 0 or 1 value, go from 0,0 to M-1,N-1 thru 1) cells with 1 value, 2) go right or downward
+- q3 input as 10-base integer, get the inversion of its bit in 2-base form, print the result in base-10 form
+
+4-15
+- programming knowledge in C++ #omg, why C++ to asked @@
+  - template type in struct method, and in class inheritance
+  - pointer malloc/assignment
+  - empty string length (is 1 not 0)
+  - what handle function call (should be stack)
+  - switch case understanding
+
+- math (high-school level)
+  - a=x%, b=y% of x - compare a vs b, which is bigger?
+  - in OPTICAL, how many ways to have 3 vowels come together?
+  - three ages z/y/z=4/7/9, 8 years agon the sum is 56
+    what is there age?
+  - statistic/probability
+    2 white, 3 black, 4 red - take out 3 as 1 ball is black. how many cases we can have?
+
+
+16th programming in javascript
+- serialize object to string
+- deserialize
