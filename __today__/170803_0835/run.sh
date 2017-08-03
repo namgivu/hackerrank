@@ -4,7 +4,7 @@
 s=${BASH_SOURCE} ; s=$(dirname "$s") ; s=$(cd "$s" && pwd) ; SCRIPT_HOME=$s
 
 #python path
-h="$SCRIPT_HOME/.." ; h=$(cd "$h" && pwd) ; HACKERRANK_HOME=$h
+h="$SCRIPT_HOME/../.." ; h=$(cd "$h" && pwd) ; HACKERRANK_HOME=$h
 export PYTHONPATH="$HACKERRANK_HOME:$PYTHONPATH"
 
 #do run
