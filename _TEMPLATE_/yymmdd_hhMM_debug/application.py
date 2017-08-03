@@ -10,10 +10,10 @@ from util import *
 # from util import * ; setupPycharmDebug()
 
 import sys
-N = int(sys.stdin.readline())
+N = int(sys.stdin.readline().strip())
 
 a = []
-a = map(int, sys.stdin.readline().split(' '))
+a = map(int, sys.stdin.readline().strip().split(' '))
 
 print(N)
 # from util import * ; flushOutput()
