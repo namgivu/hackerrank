@@ -26,3 +26,19 @@ def setupPycharmDebug(inputFile=INPUT_FILE, outputFile=OUTPUT_FILE):
 
   #output
   sys.stdout = open(outputFile, mode='w', buffering=0)
+
+
+def sortDictArray(objArray, keyLambda):
+  #ref. https://stackoverflow.com/a/73050/248616
+  sortedArr = sorted(objArray, key=keyLambda)
+  return sortedArr
+
+  #testing
+  # a = [
+  #   dict(index=1, value=1),
+  #   dict(index=0, value=333),
+  #   dict(index=2, value=22),
+  # ]
+  #
+  # print(sortDictArray(a, keyLambda=lambda k: k['value']))
+  # print(sortDictArray(a, keyLambda=lambda k: k['index']))
