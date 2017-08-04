@@ -10,10 +10,29 @@ ct stands for c**t**; tested on 201708.04 9AM
 
 3-8 non-coding question
  - ages compute
- - ty le thuan
+   TODO what this means '4 years hence' in "6 years ago, they are bla bla bla... 4 years hence, they bla bla bla..."?
  - A is x%, B is y% of x, compare A vs B?
+ - toan' ve dong` du; tim 2000^1000 mod 13
+   2000 ~ 11 mod 13
+        ~ -2 mod 13
+   2000^1000 ~ (-2)^1000 ~ 2^1000 = (2^4)^250 = 16^250
+                                                16      ~ 3     mod 13
+                                                16^250  ~ 3^250 mod 13
+                                                        ~ (3^3)^83 *3 mod 13
+                                                        ~ 27^83 *3 mod 13
+                                                          27    ~ 1 mod 13
+                                                          27^83 ~ 1 mod 13
+                                                          => final answer is 3 #TODO verify this
+ - ty le thuan
+   A and B do DTB in 10 days
+   A half and B 5 times in half time
+   how long B do it solo? => answer is 30 #TODO verify this
 
 8-16 coding knowledge
+ - mysql query - simple self-join query
+   given employees table, each employee has id, name and salary
+   print all pairs (e1,e2) that e1salary < e2.salary
+
  - hash table - the important property/factor e.g. size of elements, number of elements, hash function etc.
  -
 
