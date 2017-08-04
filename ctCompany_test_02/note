@@ -1,0 +1,19 @@
+ct stands for c**t**; tested on 201708.04 9AM
+
+16 questions in 75 minutes
+
+1-2 programming challenge (write function) ref. https://www.dropbox.com/s/rh6z1mlg8nug8nm/test02.odt?dl=0
+ - count number of number from n to m that don't have repeated digit
+ - given i in the range [1..N], print sum of odd numbers <=i
+   - dem so luong phan tu cua day so' = (cuoi' - dau)/kh.cach giua 2 so' +1
+   - tong cua day so' = (cuoi' + dau) * so luong phtu / 2
+
+3-8 non-coding question
+ - ages compute
+ - ty le thuan
+ - A is x%, B is y% of x, compare A vs B?
+
+8-16 coding knowledge
+ - hash table - the important property/factor e.g. size of elements, number of elements, hash function etc.
+ -
+
