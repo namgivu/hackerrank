@@ -11,7 +11,7 @@ def flushOutput():
   sys.stdout.flush()
 
 
-def setupPycharmDebug(inputFile=INPUT_FILE, outputFile=OUTPUT_FILE):
+def redirectStdio2File(inputFile=INPUT_FILE, outputFile=OUTPUT_FILE):
   """
   redirect input stream to input file for PyCharm debug ref. https://stackoverflow.com/a/39482389/248616
   redirect output stream to output file for PyCharm debug ref https://stackoverflow.com/a/4675744/248616

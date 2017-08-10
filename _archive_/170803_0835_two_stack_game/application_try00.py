@@ -14,7 +14,7 @@ def getSum(arr):
   return SUM
 
 #turn this on when debug to redirect stdin to file in PyCharm ref. https://stackoverflow.com/a/39482389/248616
-# from _hackerrank_.util import * ; setupPycharmDebug()
+# from _hackerrank_.util import * ; redirectStdio2File()
 
 import sys
 g = int(sys.stdin.readline())
