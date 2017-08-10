@@ -8,7 +8,7 @@ DEBUG = False
 
 
 #turn this on when debug to redirect stdin to file in PyCharm ref. https://stackoverflow.com/a/39482389/248616
-if DEBUG: from util import * ; setupPycharmDebug()
+if DEBUG: from _hackerrank_.util import * ; setupPycharmDebug()
 
 import sys
 Q = int(sys.stdin.readline().strip())
@@ -58,4 +58,4 @@ for _ in xrange(Q):
   #endregion handle action
 
   # print('S=%s' % S)
-  if DEBUG: from util import * ; flushOutput()
+  if DEBUG: from _hackerrank_.util import * ; flushOutput()

@@ -8,7 +8,7 @@ DEBUG = True #turn this TRUE/False to turn ON/off for PyCharm debug; MUST turn o
 DEBUG = False #turn this TRUE/False to turn ON/off for PyCharm debug; MUST turn off when submitted
 
 #turn this on when debug to redirect stdin to file in PyCharm ref. https://stackoverflow.com/a/39482389/248616
-if DEBUG: from util import * ; setupPycharmDebug()
+if DEBUG: from _hackerrank_.util import * ; setupPycharmDebug()
 
 import sys
 N,Q = map(int, sys.stdin.readline().strip().split(' '))
