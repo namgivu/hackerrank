@@ -1,7 +1,7 @@
 #!/usr/bin/env python2.7
 
 """
-https://www.hackerrank.com/challenges/YOUR-TOPIC
+https://www.hackerearth.com/YOUR-TOPIC
 """
 
 REDIRECT_STDIO_2_FILE = False
