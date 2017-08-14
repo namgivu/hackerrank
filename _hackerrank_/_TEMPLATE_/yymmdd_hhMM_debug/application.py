@@ -17,6 +17,6 @@ a = []
 a = map(int, sys.stdin.readline().strip().split(' '))
 
 print(N)
-if REDIRECT_STDIO_2_FILE: from _hackerrank_.util import *; flushOutput()
 print(a)
 
+if REDIRECT_STDIO_2_FILE: from _hackerrank_.util import *; flushOutput()
