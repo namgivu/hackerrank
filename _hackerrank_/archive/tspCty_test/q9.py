@@ -19,9 +19,7 @@ def minimalCost(n, pairs):
 
   #load the graph
   for pair in pairs:
-    split = pair.split(' ')
-    i = int(split[0])-1
-    j = int(split[1])-1
+    [i,j] = map(int, pair.strip().split(' '))
     a[i][j]=1
     a[j][i]=1
 
@@ -29,25 +27,35 @@ def minimalCost(n, pairs):
   visited=[]
   regions=[]
   for i in xrange(n):
-    if i not in visited:
-      visited.append(i) #mark i as visited
+    if i in visited: continue
 
-      #start the find from node i
-      iConnected=[i]
-      b=[i] ;
-      while len(b)>0:
-        #find connected node nearby
-        newFound = []
-        for j in b:
-          for h in xrange(n):
-            if h not in visited:
-              if a[j][h]==1:
-                newFound.append(h)
-                visited.append(h)
-                iConnected.append(h)
-        b = newFound
-      # print iConnected
-      regions.append(iConnected)
+    ##region start searching new connected-region from i
+    pass
+
+    #mark i as visited
+    visited.append(i)
+
+    #start the find from node i
+    iConnected=[i]
+    searchFrom=[i]
+    while len(searchFrom)>0:
+      newFound = []
+      #find connected nodes near by
+      for j in searchFrom:
+        for h in xrange(n):
+          if h not in visited:
+            if a[j][h]==1:
+              newFound.append(h)
+              visited.append(h)
+              iConnected.append(h)
+
+      searchFrom = newFound
+
+    pass
+    ##endregion start searching new connected-region from i
+
+    # print iConnected
+    regions.append(iConnected)
 
 
   #compute output
