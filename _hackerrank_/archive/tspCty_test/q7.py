@@ -42,7 +42,7 @@ def findSimilar(a, b):
   if sa==sb:
     countSimilar(digitDict=getCharDict(sa), k=0, n=len(sa), count=count)
   else:
-    countSimilar(digitDict=getCharDict(sb),k=0, n=len(sb), count=count)
+    countSimilar(digitDict=getCharDict(sb), k=0, n=len(sb), count=count)
 
   return count['value']
 
