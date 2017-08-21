@@ -24,13 +24,14 @@ def  maxTokens(friends_nodes, friends_from, friends_to, friends_weight):
   Between two nodes, we can have multiple edges with different weights
 
 
-  We count the number of tokens for each pair of nodes i and j and then find the maximum target output
+  We count the number of tokens for each pair of nodes (i,j) and then find the maximum target output
   ---
   - First we need to upgrade the graph as below step 'Graph upgrade'
 
-  - We find the connected regions - a connected region is a region that contains nodes
-    which are connected by their edges, AND all edges have the same weight values.
-    So, with node i and j, we can have multiple connected regions that contain them; each region has different edge weight for its own
+  - We find the connected regions i.e. a region that contains nodes which are connected by their edges,
+    AND all edges have the same weight values.
+    As the result, with any node pair i and j, we can have multiple connected regions that contain them;
+    each region has unique edge-weight value of its own
 
   - Number of tokens for node i and j = number of connected regions that contain them
 
@@ -42,9 +43,9 @@ def  maxTokens(friends_nodes, friends_from, friends_to, friends_weight):
   Graph upgrade
   ---
   - The target:
-    We create edges to connect tow nodes which are connected indirectly
+    We create edges to connect two nodes which are connected indirectly
     i.e. in our graph, any indirectly-connected pair of nodes will be connected directly
-    This will help us to find the connected region easily using 2d-array
+    This will help us to find the connected-region easily using 2d-array
 
   """
   return 122
