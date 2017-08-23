@@ -15,35 +15,6 @@ REDIRECT_STDIO_2_FILE = True
 if REDIRECT_STDIO_2_FILE: from _hackerrank_.util import * ; redirectStdio2File()
 
 
-'''
-the python code
-'''
-
-
-'''
-sample input
-10
-0 6   #0-init queue size=6
-3     #3-print
-1 22  #1-enqueue value=22
-3     #3-print
-1 333 #1-enqueue value=333
-3     #3-print
-2     #2-dequeue
-3     #3-print
-2     #2-dequeue
-3     #3-print
-
-sample output
-[None, None, None, None, None, None]
-[22, None, None, None, None, None]
-[22, 333, None, None, None, None]
-[22, None, None, None, None, None]
-[None, None, None, None, None, None]
-
-'''
-
-
 def plainSolution():
   a=[]
   n = 0 #queue size
@@ -88,14 +59,46 @@ def plainSolution():
       print(a)
 
 
+'''
+the python code
+'''
+
+
+'''
+sample input
+10
+0 6   #0-init queue size=6
+3     #3-print
+1 22  #1-enqueue value=22
+3     #3-print
+1 333 #1-enqueue value=333
+3     #3-print
+2     #2-dequeue
+3     #3-print
+2     #2-dequeue
+3     #3-print
+
+sample output
+[None, None, None, None, None, None]
+[22, None, None, None, None, None]
+[22, 333, None, None, None, None]
+[22, None, None, None, None, None]
+[None, None, None, None, None, None]
+
+'''
+
+
 def oopSolution(): #oop stands for object-oriented programming
-  # region helper
+  #region helper
   pass
 
   class Queue:
     a = []
     n = 0
     headNode = -1
+
+    from multiprocessing import Lock
+    mutext = Lock() #making it thread-safe ref. https://stackoverflow.com/a/3311157/248616
 
     def __init__(self, size=0):
       return self.initialize(size)
@@ -104,23 +107,26 @@ def oopSolution(): #oop stands for object-oriented programming
       return str(self.a)
 
     def initialize(self, size):
-      self.n = size if size >= 1 else 0
-      self.a = [None] * self.n
-      self.headNode = -1
+      with self.mutext: #making it thread-safe ref. https://stackoverflow.com/a/3311157/248616
+        self.n = size if size >= 1 else 0
+        self.a = [None] * self.n
+        self.headNode = -1
 
     def enqueue(self, value):
-      if self.headNode + 1 >= self.n:  # out of queue size
-        raise Exception('Out of queue size n=%s' % self.n)
+      with self.mutext: #making it thread-safe ref. https://stackoverflow.com/a/3311157/248616
+        if self.headNode + 1 >= self.n:  # out of queue size
+          raise Exception('Out of queue size n=%s' % self.n)
 
-      self.headNode += 1
-      self.a[self.headNode] = value
+        self.headNode += 1
+        self.a[self.headNode] = value
 
     def dequeue(self):
-      self.a[self.headNode] = None
-      self.headNode = max(self.headNode - 1, -1)
+      with self.mutext: #making it thread-safe ref. https://stackoverflow.com/a/3311157/248616
+        self.a[self.headNode] = None
+        self.headNode = max(self.headNode - 1, -1)
 
   pass
-  # endregion helper
+  #endregion helper
 
   q = Queue()
 
@@ -155,8 +161,9 @@ def oopSolution(): #oop stands for object-oriented programming
     elif command==3:
       print(q)
 
+  pass
 
-#plainSolution()
 oopSolution()
+#plainSolution()
 
 if REDIRECT_STDIO_2_FILE: from _hackerrank_.util import *; flushOutput()
