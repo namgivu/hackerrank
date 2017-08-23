@@ -7,7 +7,7 @@ find the max length of prefix-matching character between the original string wit
 """
 
 
-# TODO we fail with large input
+#TODO we fail with large input
 
 def stringSimilarity(inputs):
   outputs=[]
@@ -25,7 +25,7 @@ def stringSimilarity(inputs):
 
 
   for s in inputs:
-    cs=0
+    cs=0 #cs stands for count similar
     for i in xrange(len(s)):
       t = s[i:] #get suffix with len=i+1
       cs += countSimilar(s,t)
