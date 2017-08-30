@@ -1,7 +1,14 @@
 #!/usr/bin/env python2.7
 
 """
+ref
+---
 https://www.hackerrank.com/challenges/YOUR-TOPIC
+
+util
+---
+check prime
+https://primes.utm.edu/curios/includes/primetest.php
 """
 
 REDIRECT_STDIO_2_FILE = False
@@ -10,8 +17,10 @@ REDIRECT_STDIO_2_FILE = True
 #turn this on when debug to redirect stdin/stdout to file in PyCharm ref. https://stackoverflow.com/a/39482389/248616
 if REDIRECT_STDIO_2_FILE: from _hackerrank_.util import * ; redirectStdio2File()
 
+#TODO I struggle to find the right solution for this @@
 
 TRACE=False
+TRACE=True
 import sys
 Q = int(sys.stdin.readline().strip())
 
@@ -19,7 +28,7 @@ Q = int(sys.stdin.readline().strip())
 
 def countOp(N, currCount):
   if N<=3:
-    if TRACE: trace.append('reach 3')
+    if TRACE: trace.append('reach %s c=%s' % (N, N+currCount))
     return N+currCount
 
   #region find N=a*b and abMax
@@ -35,10 +44,10 @@ def countOp(N, currCount):
   #endregion find N=a*b and abMax
 
   if abMax>0:
-    if TRACE: trace.append('abMax=%s' % abMax)
+    if TRACE: trace.append('abMax=%s c=%s' % (abMax,currCount+1) )
     return countOp(abMax, currCount+1)
   else: #N is prime
-    if TRACE: trace.append('-1')
+    if TRACE: trace.append('-1 c=%s' % str(currCount+1))
     return countOp(N-1, currCount+1)
 
 
@@ -48,14 +57,9 @@ for _ in xrange(Q):
   N = int(sys.stdin.readline().strip())
   trace=[]
   print(countOp(N,0))
-  if TRACE: print(trace)
+  if TRACE:
+    print('\n'.join(trace))
+    print(len(trace))
 
 
 if REDIRECT_STDIO_2_FILE: from _hackerrank_.util import *; flushOutput()
-
-# 7
-# ['abMax=1369', 'abMax=37', '-1', 'abMax=6', 'abMax=2', 'reach 3']
-# 966514
-# 1369 x 706
-# 37 x 37
-#
