@@ -8,7 +8,7 @@ inverse bit of 10-base number and print the result in 10-base
 DEBUG = False #turn this TRUE/False to turn ON/off for PyCharm debug; MUST turn off when submitted
 
 #turn this on when debug to redirect stdin to file in PyCharm ref. https://stackoverflow.com/a/39482389/248616
-if DEBUG: from _hackerrank_.util import * ; redirectStdio2File()
+if DEBUG: from hackerrank.util import * ; redirectStdio2File()
 
 
 def getIntegerComplement(a):

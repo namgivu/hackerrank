@@ -7,7 +7,7 @@ https://www.hackerrank.com/challenges/game-of-two-stacks
 #TODO Fix incorrect solution
 
 #turn this on when debug to redirect stdin to file in PyCharm ref. https://stackoverflow.com/a/39482389/248616
-from _hackerrank_.util import * ; redirectStdio2File()
+from hackerrank.util import * ; redirectStdio2File()
 
 
 def getSum(arr, x):
