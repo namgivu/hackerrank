@@ -106,5 +106,10 @@ ENV/
 
 
 ##region my ignore
+.idea/hackerrank.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
+
 **/output.txt
 ##endregion my ignore
