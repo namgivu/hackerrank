@@ -16,7 +16,7 @@ a = map(int, sys.stdin.readline().strip().split(' '))
 
 
 def primeList(n):
-  #reef. https://stackoverflow.com/a/3886074/248616
+  #ref. https://stackoverflow.com/a/3886074/248616
 
   #http://stackoverflow.com/questions/2068372/fastest-way-to-list-all-primes-below-n-in-python/3035188#3035188
   """ Returns  a list of primes < n """
