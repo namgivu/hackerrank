@@ -2,7 +2,7 @@
 
 dataArr = [0, 1, 2, 3, 4, 5, 6]
 
-curr = nxt = last = None
+prev = curr = last = None
 start = None
 
 
@@ -12,26 +12,25 @@ def process(curr, nxt, msg):
 
 
 for cursor in dataArr:
-  msg = cursor #just alias
+  nxt = cursor #just alias
 
-  if not curr:
-    curr = msg
-    start = curr
-  elif curr and not nxt:
-    nxt = msg
+  if not prev:
+    prev = nxt
+    start = prev
+  elif prev and not curr:
+    curr = nxt
 
   else:
-    process(curr, nxt, msg)
+    process(prev, curr, nxt)
 
+    prev = curr
     curr = nxt
-    nxt = msg
 
-  last = msg
+  last = nxt
 
-#process 'nxt, last' as 'curr, nxt'
-#process 'last, nil' as 'curr, nxt'
-process(curr, nxt, None)
-process(nxt, None, None)
+#handle the last value of prev & curr
+process(prev, curr, None)
+process(curr, None, None)
 
 print
 print(start, last)
