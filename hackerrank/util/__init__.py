@@ -20,11 +20,11 @@ def redirectStdio2File(inputFile=INPUT_FILE, outputFile=OUTPUT_FILE):
   import sys
   import StringIO
 
-  #input
+  #redirect stdin to file
   lines = "".join(open(inputFile, "r").readlines())
   sys.stdin = StringIO.StringIO(lines)
 
-  #output
+  #redirect stdout to file
   sys.stdout = open(outputFile, mode='w', buffering=0)
 
 
