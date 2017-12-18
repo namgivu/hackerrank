@@ -112,4 +112,6 @@ ENV/
 .idea/workspace.xml
 
 **/output.txt
+
+venv3
 ##endregion my ignore
