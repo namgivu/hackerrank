@@ -2,6 +2,11 @@
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
+#simple datetime calculator
+d = datetime.strptime('2017-01-04', '%Y-%m-%d')
+d = d + relativedelta(months=2, days=27)
+print(d)
+
 #datetime from string  ref. https://stackoverflow.com/a/466376/248616
 d = datetime.strptime('2017-12', '%Y-%m')
 print(d)
