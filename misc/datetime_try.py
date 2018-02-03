@@ -3,17 +3,28 @@ from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
 
-#diff. in second(s) and month(s)
+#region diff. in second(s) and month(s)
 d1 = datetime.today()
 d2 = d1 + relativedelta(seconds=6)
 d2 = d2 + relativedelta(minutes=1)
 diff1 = relativedelta(d1, d2)
 diff2 = relativedelta(d2, d1)
+
 print(d1)
 print(d2)
+print('')
+
+print(type(diff1))
 print(diff1.seconds)
 print(diff2.seconds)
-print((d2-d1).total_seconds())
+
+print('')
+diff3 = d2-d1
+print(type(diff3))
+print(diff3.total_seconds())
+print(str(diff3))
+
+#endregion diff. in second(s) and month(s)
 
 #simple datetime calculator
 d = datetime.strptime('2017-01-04', '%Y-%m-%d')
