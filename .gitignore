@@ -110,6 +110,8 @@ ENV/
 .idea/misc.xml
 .idea/modules.xml
 .idea/workspace.xml
+.idea/other.xml
+.idea/python-start.iml
 
 **/output.txt
 
