@@ -1,5 +1,5 @@
-INPUT_FILE='input.txt'
-OUTPUT_FILE='output.txt'
+INPUT_FILE  = 'input.txt'
+OUTPUT_FILE = 'output.txt'
 
 
 def flushOutput():

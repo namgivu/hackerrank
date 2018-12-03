@@ -113,7 +113,9 @@ ENV/
 .idea/other.xml
 .idea/python-start.iml
 
-**/output.txt
 
 venv3
+venv
+**/output.txt
+
 ##endregion my ignore
