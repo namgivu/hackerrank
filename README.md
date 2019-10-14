@@ -16,14 +16,25 @@ https://www.jetbrains.com/shop/eform/students
 from jetbrain toolbox ide listing, install **PyCharm** Professional - Community edition is also good to go.
 
 
-# install python 3.6.9
+# install python
 google
-install python 3.6.9 for windows
-install python 3.6.9 for macos
+install python for windows
+install python for macos
 
 windows
-https://www.python.org/downloads/windows/
 https://realpython.com/installing-python/#step-1-download-the-python-3-installer
 
 macos
-https://www.python.org/downloads/mac-osx/
+https://realpython.com/installing-python/#macos-mac-os-x
+
+
+# hello python code
+create file `hello.py` in some folder FOLDER with content as below
+```
+print('Hello Python!')
+```
+run it 
+```
+# go to your folder FOLDER
+python hello.py
+```
