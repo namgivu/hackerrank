@@ -11,6 +11,7 @@ download & install **jetbrains toolbox**
 https://www.jetbrains.com/toolbox-app/?fromMenu
 
 register jetbrains account with .edu email to enjoy free package for students
+https://www.jetbrains.com/shop/eform/students
 
 from jetbrain toolbox ide listing, install **PyCharm** Professional - Community edition is also good to go.
 
