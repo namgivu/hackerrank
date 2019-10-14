@@ -17,3 +17,7 @@ t1=i + int(s1);   print(t1)
 t2=d + float(s2); print(t2)
 t3=s + s3;        print(t3)
 
+# use f-string
+print(f't1={i + int(s1)}')
+print(f't2={d + float(s2)}')
+print(f't3={s + s3}')
