@@ -38,3 +38,7 @@ run it
 # go to your folder FOLDER
 python hello.py
 ```
+
+# install zoom
+we share screen to learn coding with Zoom
+https://zoom.us/support/download
