@@ -1,8 +1,13 @@
-# Read a full line of input from stdin and save it to our dynamically typed variable, input_string.
+import sys
+
+# redirect input stream aka :stdin to file
+old_stdin = sys.stdin
+sys.stdin = open('input')
+
+# day 00 code
 input_string = input()
-
-# Print a string literal saying "Hello, World." to stdout.
 print('Hello, World.')
-
-# TODO: Write a line of code here that prints the contents of input_string to stdout.
 print(input_string)
+
+# restore stdin
+sys.stdin = old_stdin
