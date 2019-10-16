@@ -1,8 +1,5 @@
-import sys
+import sys; sys.stdin = open('input')  # redirect input stream aka :stdin to file
 
-# redirect input stream aka :stdin to file
-old_stdin = sys.stdin
-sys.stdin = open('input')
 
 # day 01 code
 i = 4

@@ -1,8 +1,4 @@
-import sys
-
-# redirect input stream aka :stdin to file
-old_stdin = sys.stdin
-sys.stdin = open('input')
+import sys; sys.stdin = open('input')  # redirect input stream aka :stdin to file
 
 # day 02
 s=input(); meal = float(s)
