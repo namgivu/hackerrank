@@ -36,9 +36,25 @@ print('Hello Python!')
 run it 
 ```
 # go to your folder FOLDER
-python hello.py
+python hello.py4
 ```
 
 # install zoom
 we share screen to learn coding with Zoom
 https://zoom.us/support/download
+
+
+# summary 
+## day 1, day 2
+python basic
+
+## day 3 
+function with infinite params
+dict/list comprehension
+lambda
+        
+**iterator -> generator** 
+ref. https://realpython.com/introduction-to-python-generators/#understanding-the-python-yield-statement
+> a special iterator called a generator
+ 
+> When you call special methods on the generator, such as `next()`, the code within the function is `executed up to yield`
