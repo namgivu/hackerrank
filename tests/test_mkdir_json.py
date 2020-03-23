@@ -3,15 +3,49 @@ from src.mkdir_json import make_path
 
 class Test:
 
-    def test0(self):
-        d = {}
-        d = make_path(d, 'path-to', 'my', 'keys')
-        assert d.get('path-to') is not None
+    #region test0 related
 
-    def test1(self):
+    def test0(self):
         d = {}
         make_path(d, 'path-to', 'my', 'keys')['test'] = 122
         assert d['path-to']['my']['keys']['test'] == 122
+
+
+    def test0b(self):  #NOTE this will fail; see resolution in test0c()
+        d = {}
+        d = make_path(d, 'path-to', 'my', 'keys')
+        d['path-to']['my']['keys']['test'] = 122
+        assert d['path-to']['my']['keys']['test'] == 122
+
+
+    def test0c(self):
+        d = {}
+        make_path(d, 'path-to', 'my', 'keys')
+        d['path-to']['my']['keys']['test'] = 122
+        assert d['path-to']['my']['keys']['test'] == 122
+
+
+    def test0d(self):
+        d = {}
+
+        make_path(d, 'path-to', 'my', 'keys')
+        assert d['path-to']               is not None
+        assert d['path-to']['my']         is not None
+        assert d['path-to']['my']['keys'] is not None
+
+        d['path-to']['my']['keys']['test'] = 122
+        assert d['path-to']               is not None
+        assert d['path-to']['my']         is not None
+        assert d['path-to']['my']['keys'] is not None
+        assert d['path-to']['my']['keys']['test'] == 122
+
+    #endregion test0 related
+
+
+    def test1(self):  #TODO this fails why?
+        d = {}
+        d = make_path(d, 'path-to', 'my', 'keys')
+        assert d.get('path-to') is not None
 
         '''
         TODO this test failed pls fix

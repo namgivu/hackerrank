@@ -4,7 +4,7 @@ def make_path(d: dict, *path: str) -> dict:
     """
     for key in path:
         d = d.setdefault(key, {})
-    return d
+    return d  #TODO returned value here seem NOT WORKING, why?
 
 
 def make_path2(my_dict: dict, *paths: str) -> dict:
