@@ -9,9 +9,12 @@ def make_path(my_dict: dict, *paths: str) -> dict:
     return last_key_item
 
 
-def mkdir_json(d: dict, *path: str) -> dict:
+def mkdir_json(d:'output dict', *key_path: str) -> dict:
     """
-    Boseong Choi on stackoverflow ref. https://stackoverflow.com/a/60808993/248616
+    Similar to mkdir -p but applied for json path instead of folder path ref. Boseong Choi on stackoverflow https://stackoverflow.com/a/60808993/248616
+
+    * sample usage *
+    d = json.loads('YOUR_JSON_STRING'); make_path(d, 'path-to', 'my', 'keys')
     """
-    for key in path:
-        d = d.setdefault(key, {})
+    for k in key_path:
+        d = d.setdefault(k, {})

@@ -50,7 +50,9 @@ class Test:
 
 
 class Test_mkdir_json:
-    def test__mkdir_json(self):
+
+    def test0(self):
+        """testcase: the path has NO value"""
         d = {}
 
         mkdir_json(d, 'path-to', 'my', 'keys')
@@ -60,3 +62,21 @@ class Test_mkdir_json:
 
         d['path-to']['my']['keys']['test'] = 122
         assert d['path-to']['my']['keys']['test'] == 122
+
+
+    def test1(self):
+        """
+        testcase: the path has values already
+            init     path = l0.l1.l2_other has value set
+            expected output to have l0.l1.l2_key default set
+        """
+        d             = {}
+        d['l0']       = {}
+        d['l0']['l1'] = {
+            'l2_other': 'note that there is no :l1_key field here'
+        }
+
+        mkdir_json(d, 'l0', 'l1', 'l2_key')
+        d['l0']['l1']['l2_key'] = 122
+        assert d['l0']['l1']['l2_key'] == 122
+        assert d['l0']['l1']['l2_other']
