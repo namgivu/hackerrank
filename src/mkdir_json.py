@@ -1,12 +1,4 @@
-def make_path(d: dict, *path: str) -> dict:
-    """
-    Boseong Choi on stackoverflow ref. https://stackoverflow.com/a/60808993/248616
-    """
-    for key in path:
-        d = d.setdefault(key, {})
-
-
-def make_path2(my_dict: dict, *paths: str) -> dict:
+def make_path(my_dict: dict, *paths: str) -> dict:
     """
     Boseong Choi on stackoverflow ref. https://stackoverflow.com/a/60808993/248616
     """
@@ -17,3 +9,9 @@ def make_path2(my_dict: dict, *paths: str) -> dict:
     return last_key_item
 
 
+def mkdir_json(d: dict, *path: str) -> dict:
+    """
+    Boseong Choi on stackoverflow ref. https://stackoverflow.com/a/60808993/248616
+    """
+    for key in path:
+        d = d.setdefault(key, {})

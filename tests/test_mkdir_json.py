@@ -1,4 +1,4 @@
-from src.mkdir_json import make_path
+from src.mkdir_json import make_path, mkdir_json
 
 
 class Test:
@@ -19,6 +19,7 @@ class Test:
 
 
     def test0c(self):
+        """same as test0b but d not get from d= make_path()"""
         d = {}
         make_path(d, 'path-to', 'my', 'keys')
         d['path-to']['my']['keys']['test'] = 122
@@ -42,20 +43,20 @@ class Test:
     #endregion test0 related
 
 
-    def test1(self):  #TODO this fails why?
+    def test1(self):  #NOTE this will fail
         d = {}
         d = make_path(d, 'path-to', 'my', 'keys')
-        assert d.get('path-to') is not None
+        assert d.get('path-to') is not None  # Failed because make_path()
 
-        '''
-        TODO this test failed pls fix
-        
-        def test0(self):
-            d = {}
-            d = make_path(d, 'path-to', 'my', 'keys')
-        >       assert d.get('path-to') is not None
-        E       AssertionError: assert None is not None
-        E        +  where None = <built-in method get of dict object at 0x7f3ad5109140>('path-to')
-        E        +    where <built-in method get of dict object at 0x7f3ad5109140> = {}.get
-        tests/test_mkdir_json.py:9: AssertionError
-        '''
+
+class Test_mkdir_json:
+    def test__mkdir_json(self):
+        d = {}
+
+        mkdir_json(d, 'path-to', 'my', 'keys')
+        assert d['path-to']               is not None
+        assert d['path-to']['my']         is not None
+        assert d['path-to']['my']['keys'] is not None
+
+        d['path-to']['my']['keys']['test'] = 122
+        assert d['path-to']['my']['keys']['test'] == 122
